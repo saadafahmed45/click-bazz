@@ -1,0 +1,23 @@
+.review-section{
+    padding: 20px 0px;
+}
+
+.carousel-header h5 {
+    margin-top: 19px;
+    font-size: 22px;
+}
+
+.carousel-bottom p {
+    opacity: 0.8;
+    width: 62%;
+    margin-left: 20%;
+}
+.carousel-header img {
+    border-radius: 50%;
+    padding: px;
+}
+
+.carousel-box{
+    cursor: pointer;
+}
+

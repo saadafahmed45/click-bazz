@@ -1,0 +1,9 @@
+.card.mb-3 svg {
+    font-size: 41px;
+    margin-left: 45%;
+    margin-top: 10px;
+    color: cadetblue;
+}
+.crd-left {
+    margin-left: 10%;
+}

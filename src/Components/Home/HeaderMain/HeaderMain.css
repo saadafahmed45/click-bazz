@@ -1,0 +1,22 @@
+.header-main{
+    background-color:rgb(248, 234, 231);
+    padding:50px 0px;
+}
+
+.header-section{
+    text-align:left;
+}
+.header-section h1 {
+    font-size: 53px;
+    color: #2B2F43;
+}
+
+.header-section p {
+    font-size: 18px;
+    margin-top: 30px;
+    opacity: .8;
+}
+
+.header-image img{
+    border-radius: 10px;
+}

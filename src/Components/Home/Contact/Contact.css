@@ -1,0 +1,29 @@
+.contact-section{
+    background:url("../../Images/camra.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:600px;
+   /* height:100vh; */
+    position:relative;
+    /* padding: auto; */
+    /* opacity: .9; */
+    /* z-index:1; */
+
+}
+.contact-section::after{
+    height:600px;
+    content:' ';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -50;
+    right: 0;
+    background-color:#3a4556;
+}
+.contact-form {
+    width: 55%;
+    margin-left: 24%;
+    margin-top: 40px;
+}
+/* .btn-primary */

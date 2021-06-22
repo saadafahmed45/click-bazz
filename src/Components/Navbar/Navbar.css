@@ -1,0 +1,23 @@
+.navbar-nav {
+  margin-left: 62%;
+}
+.navbar-brand {
+  margin-left: 5%;
+}
+.navbar-brand a {
+  color: tomato;
+  font-weight: 600;
+  font-size: 25px;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.login-btn {
+  background: tomato;
+  padding: 6px 18px;
+  border-radius: 3px;
+  color: #fff;
+}
+
+

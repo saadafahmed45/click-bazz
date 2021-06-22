@@ -1,0 +1,100 @@
+.container{
+    padding:50px;
+}
+input#flexSwitchCheckDefault {
+    margin-left: 55%;
+}
+.form-section {
+    box-shadow: 0px 0px 7px #ddd;
+    width: 46%;
+    height: 70%;
+    padding: 40px 0px;
+    margin-left: 28%;
+    background: #fafafa;
+    border-radius: 10px;
+
+}
+/* .form-control input-sec {
+    border: 1px solid tomato;
+    margin-top: 20px;
+    border-radius: 25px;
+    padding: 6px 9px;
+} */
+input.form-control.input-sec {
+    width: 45%;
+    margin-left: 26%;
+    border: 1px solid rgb(240, 110, 87);
+    /* margin-top: 20px; */
+    border-radius: 25px;
+    /*padding: 6px 9px;
+     */;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+
+span img {
+    width: 30px;
+}
+.social-log button {
+    border-radius: 18px;
+    border: 1px solid #ddd;
+    margin-top: 10px;
+    padding: 1px 25px;
+}
+input.submit-btn {
+    border: none;
+    padding: 6px 20%;
+    background: tomato;
+    color: #fff;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.check-box {
+    margin-top: 10px;
+}
+.check-box label {
+    /* margin-left: 1px; */
+    color: #0041d5;
+    font-size: 16px;
+    text-decoration: underline;
+}
+.check-box p {
+    font-size: 14px;
+}
+
+
+
+/* responsive */
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/* @media only screen and (max-width: 600px) {
+    .form-section {
+        box-shadow: 0px 0px 2px;
+        width: 83%;
+        height: 72%;
+        padding: 20px 0px;
+        margin-left: 10%;
+        background: #fafafa;
+        border-radius: 10px;
+    }
+} */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .form-section {
+        box-shadow: 0px 0px 2px;
+        width: 100%;
+        height: 71%;
+        padding: 12px 0px;
+        margin-left: 0%;
+        background: #fafafa;
+        border-radius: 10px;
+    }
+
+}
