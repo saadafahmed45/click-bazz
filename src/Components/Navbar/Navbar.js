@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { UserContext } from "../../App";
 // import { UserContext } from "../../App";
@@ -8,7 +8,21 @@ const Navbar = () => {
   const [loginUser, setLoginUser] = useContext(UserContext);
 
 
-  
+  const [admin,setAdmin] =useState(false)
+
+useEffect(() => {
+    fetch("http://localhost:7000/isAdmin",{
+      method: 'POST',
+      headers: {"content-type": 'application/json'},
+      body:JSON.stringify({email:loginUser.email})
+    
+    })
+    .then(res => res.json())
+    .then(data => setAdmin(data));
+
+},[])
+
+
   return (
     <div class="sticky-top">
       <nav class="navbar navbar-expand-lg navbar-light bg-light ">
@@ -29,32 +43,37 @@ const Navbar = () => {
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
+
+
+
+
+
+          { admin && <div className="admin">
+              <a class="nav-link " href="#">
+                <Link to="/dashbord/orderList">Admin</Link>
+                </a>
+            </div>}
+
+
+
+
+
               <a class="nav-link" href="#">
                 <Link to="/">Home</Link>
               </a>
               <a class="nav-link" href="#">
                 <Link to="/orders">Review</Link>
               </a>
+            
               <a class="nav-link" href="#">
-                <Link to="/dashboard">Admin</Link>
+                <Link to="/dashbord/orderList">Our Team</Link>
               </a>
               <a class="nav-link" href="#">
-                <Link to="/deals">Contact</Link>
+                <Link to="/deals">Contact us</Link>
               </a>
 
-              <a class="   nav-link" href="#">
-                {/* {loginUser.isSignedIn && (
-        <div className='user-sec'>
-          <p>welcome! {loginUser.name}</p>
-        </div>
-      ) } */}
-
-
-
-
-{/* <Link class="login-btn" to="/login">
-                      Login
-                    </Link> */}
+              <a class="nav-link" href="#">
+       
                 <div>
 
 
@@ -69,6 +88,9 @@ const Navbar = () => {
                 </div>
                 {/* <Link class="login-btn" to="/login">Login</Link> */}
               </a>
+
+
+
             </div>
           </div>
         </div>

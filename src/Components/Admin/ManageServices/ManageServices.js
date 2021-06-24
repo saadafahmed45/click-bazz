@@ -38,7 +38,8 @@ const ManageServices = () => {
             <table className="table mt-4">
               <thead>
                 <tr>
-                  <th scope="col">Product Name</th>
+                  <th scope="col">Product Id</th>
+                  <th scope="col">Product Name</th> 
                   <th scope="col">Price</th>
                   <th scope="col">Action</th>
                 </tr>
@@ -47,6 +48,7 @@ const ManageServices = () => {
                 {
                 services.map((service) => (
                   <tr>
+                    <td>{service._id}</td>
                     <td>{service.name}</td>
                     <td> ${service.price} </td>
                     <td>

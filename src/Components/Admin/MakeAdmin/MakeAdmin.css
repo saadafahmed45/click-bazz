@@ -1,0 +1,12 @@
+.make-admin {
+    width: 55%;
+    margin-left: 8%;
+    margin-top: 5%;
+    box-shadow: 0px 0px 8px -4px;
+    padding: 30px 20px;
+    border-radius: 10px;
+}
+.make-admin h5 {
+    text-align: left;
+    opacity: .9;
+}

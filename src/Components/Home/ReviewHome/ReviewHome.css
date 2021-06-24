@@ -21,3 +21,18 @@
     cursor: pointer;
 }
 
+
+@media only screen and (max-width: 600px) {
+
+
+.review-section {
+	padding: 25px 0px;
+}
+
+
+.carousel-header p {
+	/* width: aut; */
+	font-size: 14px;
+	display: contents;
+}
+}

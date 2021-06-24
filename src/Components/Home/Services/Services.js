@@ -20,20 +20,21 @@ const Services = () => {
   }, []);
 
   return (
-    <section className="services-section p-5">
+    <section className="services-section">
       <div className="container">
-        <div className=" row">
-          <div className="col-md-12">
+
+          <div className="col">
             <h1>
-              Our Awesome <span className="brand-color">Services</span>
+              Our Awesome <span className="brand-color bold-six">Services</span>
             </h1>
           </div>
-        </div>
+      
         <div className=" row">
           {services.map((service) => (
-            <div className="col-12 col-sm-6 col-md-4 mb-3 "data-aos="zoom-in-up">
+            <div className="col-12 col-sm-6 col-md-4 mb-3  d-flex justify-content-center "data-aos="zoom-in-up">
               <Link to={`/checkOut/${service._id}`}>
-                <div className="card card-hover py-3">
+               <div className="main-card">
+               <div className="card card-hover py-3">
                   <img
                     src={service.imageURL}
                     className="card-img-top img-fluid"
@@ -43,11 +44,12 @@ const Services = () => {
                     <h4 className="card-title">{service.name}</h4>
                     <h5 className="brand-color">${service.price}</h5>
 
-                    <div className="d-flex align-items-center justify-content-between">
+                    <div className="">
                       <p>{service.description}</p>
                     </div>
                   </div>
                 </div>
+               </div>
               </Link>
             </div>
           ))}
@@ -56,7 +58,7 @@ const Services = () => {
      
 
         <div className="services-btn pt-5">
-          <button className="btn btn-danger brand-bg ">Explore More</button>
+          <button className="btn login-btn ">Explore More</button>
         </div>
       </div>
     </section>

@@ -1,10 +1,7 @@
 import "./App.css";
 import React, { createContext, useState } from "react";
-
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-// import Header from "./Components/Home/Header/Header";
 import Home from "./Components/Home/Home/Home";
-// import AddServices from './Components/Admin/AddServices/AddServices'
 import Dashboard from "./Components/Admin/Dashboard/Dashboard";
 import AddServices from "./Components/Admin/AddServices/AddServices";
 import CheckOut from "./Components/User/CheckOut/CheckOut";
@@ -14,6 +11,8 @@ import ManageServices from "./Components/Admin/ManageServices/ManageServices";
 import PrivateRoute from "./Components/PrivateRoute/PrivateRoute";
 import Login from "./Components/Login/Login";
 import Review from "./Components/Home/Review/Review";
+import MakeAdmin from "./Components/Admin/MakeAdmin/MakeAdmin";
+import OrderList from "./Components/Admin/OrderList/OrderList";
 export const UserContext = createContext();
 
 function App() {
@@ -35,8 +34,7 @@ function App() {
             <Route path="/checkOut/booking"></Route>
 
             <Route path="/review">
-            <Review></Review>
-        
+              <Review></Review>
             </Route>
 
             <Route path="/bookingList">
@@ -59,11 +57,11 @@ function App() {
             </Route>
 
             <Route path="/dashbord/makeAdmin">
-              <h1>Make Admin</h1>
+              <MakeAdmin></MakeAdmin>
             </Route>
 
             <Route path="/dashbord/orderList">
-              <h1>order List</h1>
+              <OrderList></OrderList>
             </Route>
 
             <Route path="/dashbord/manageServices">

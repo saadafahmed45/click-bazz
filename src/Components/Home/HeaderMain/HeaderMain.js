@@ -16,17 +16,17 @@ useEffect(() => {
 
       <section className=" container">
         <div className="row">
-        <div className="col-md-6">
+        <div className=" col-12 col-md-6">
             <div className="header-section">
-            <h1>To Make Your <br/>Creative Photography</h1>
-                <p>“Photography is a way of feeling, of touching, of loving. What you have caught on film is captured forever… It remembers little things, long after you have forgotten everything.What I like about photographs is that they capture a moment that’s gone forever, impossible to reproduce”</p>
-         <button type="button" class="btn  brand-bg btn-danger">
+            <h1>To Make Your <br/>Creative <span className="brand-color">Photography</span></h1>
+                <p>“Photography is a way of feeling, of touching, of loving. What you have caught on film is captured forever… It remembers little things, long after you have forgotten everything.What I like about photographs is that they capture a moment that’s gone forever”</p>
+         <button type="button" class="btn  login-btn">
         Get Appointment
          </button>
          
             </div>
             </div>
-            <div className="col-md-6">
+            <div className="col-12 col-md-6">
                 <div className="header-image " data-aos="fade-left">
                 <img className="img-fluid" src={HeaderPicture} alt="" />
                 </div>

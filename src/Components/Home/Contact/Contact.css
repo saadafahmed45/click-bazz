@@ -3,27 +3,36 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height:600px;
-   /* height:100vh; */
+    height:610px;
     position:relative;
-    /* padding: auto; */
-    /* opacity: .9; */
-    /* z-index:1; */
-
+    z-index: 1;
+    background-attachment: fixed;
 }
 .contact-section::after{
-    height:600px;
+    height:610px;
     content:' ';
     position: absolute;
     top: 0;
     width: 100%;
-    z-index: -50;
+    z-index: -1;
     right: 0;
     background-color:#3a4556;
+    opacity: .7;
+
 }
 .contact-form {
-    width: 55%;
-    margin-left: 24%;
-    margin-top: 40px;
+    width: 60%;
+    margin-left: 22%;
+    margin-top: 52px;
 }
 /* .btn-primary */
+@media only screen and (max-width: 600px) {
+
+.contact-section {
+		height: 540px;
+}
+.contact-section::after{
+    height: 540px;
+}
+
+}

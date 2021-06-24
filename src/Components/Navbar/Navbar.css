@@ -1,5 +1,5 @@
 .navbar-nav {
-  margin-left: 62%;
+  margin-left: 45%;
 }
 .navbar-brand {
   margin-left: 5%;
@@ -15,9 +15,29 @@ a {
 }
 .login-btn {
   background: tomato;
-  padding: 6px 18px;
+  padding: 4px 20px;
   border-radius: 3px;
   color: #fff;
+  /* border: 1px solid tomato; */
+  transition: .2s;
 }
 
+.login-btn:hover {
+  background: none;
+  padding: 4px 20px;
+  border-radius: 3px;
+  color: #000;
+  border: 1px solid tomato;
+}
+a.nav-link {
+  margin-left: 10px;
+  font-weight: 500;
+  font-size: 17px;
+  
+}
+
+a.nav-link:hover{
+  margin-left: 10px;
+  /* font-weight: 500; */
+}
 

@@ -1,0 +1,15 @@
+.footer-section{
+    background-color:rgb(248, 234, 231);
+    padding:10px 0px;
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+
+    .link-sec a {
+        display: inline-block;
+        margin-left: 20px;
+    }
+}

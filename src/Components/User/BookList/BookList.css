@@ -1,9 +1,23 @@
 .card.mb-3 svg {
-    font-size: 41px;
-    margin-left: 45%;
-    margin-top: 10px;
-    color: cadetblue;
+  font-size: 41px;
+  margin-left: 45%;
+  margin-top: 10px;
+  color: cadetblue;
 }
 .crd-left {
-    margin-left: 10%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+@media only screen and (max-width: 600px) {
+  .col-md-10.booking-header h3 {
+    margin-left: 32%;
+  }
+  .alert-danger {
+    color: #842029;
+    background-color: #f8d7da;
+    border-color: #f5c2c7;
+    width: 46%;
+    margin-left: 35%;
+  }
 }

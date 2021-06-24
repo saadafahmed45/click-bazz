@@ -36,9 +36,11 @@ const Contact = () => {
             rows="8"
             cols="50"
           ></textarea>
-
+ {/* <button type="button" class="btn  brand-bg btn-danger">
+        Get Appointment
+         </button> */}
           <input
-            class="btn btn-danger appointment-btn mt-2"
+            class="btn  brand-bg btn-danger mt-4"
             type="submit"
           ></input>
         </form>

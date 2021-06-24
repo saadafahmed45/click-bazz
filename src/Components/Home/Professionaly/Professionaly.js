@@ -1,12 +1,14 @@
 import React from "react";
 import StudioPic from "../../Images/studio.jpg";
 import "./Professionaly.css";
+import Aos from 'aos';
+import "aos/dist/aos.css";
 const Professionaly = () => {
   return (
     <div className="Professionaly-section">
       <div className="container">
         <div className=" row">
-          <div className=" col-md-6 studio-pic">
+          <div className=" col-md-6 studio-pic "  data-aos="fade-up-right">
             <img className="img-fluid" src={StudioPic} alt="" />
           </div>
 

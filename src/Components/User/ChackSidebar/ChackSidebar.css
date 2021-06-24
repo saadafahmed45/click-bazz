@@ -14,3 +14,19 @@
 .sidebar svg{
     margin-right: 5px;
 }
+
+
+@media only screen and (max-width: 600px) {
+
+
+.sidebar.d-flex.flex-column.justify-content-between.col-md-2.py-5.px-4 span {
+	/* display: none; */
+    font-size: 10px;
+}
+
+.sidebar {
+	background-image: linear-gradient(60deg, rgb(247, 175, 81),tomato);
+	position: fixed;
+	width: 70px;
+}
+}

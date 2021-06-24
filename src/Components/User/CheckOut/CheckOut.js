@@ -20,10 +20,7 @@ const CheckOut = () => {
   console.log(addCart);
   // order
 
-  // const { register, handleSubmit, watch, errors } = useForm();
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
-
-  // const [shippingData, setShippingData] = useState(null);
 
   const { register, handleSubmit, watch, errors } = useForm();
 
@@ -54,11 +51,9 @@ const CheckOut = () => {
     });
   };
 
-  // const handlePaymentSuccess = (paymentId) => {
+ 
 
-  // };
-
-  console.log(watch("example")); // watch input value by passing the name of it
+  // console.log(watch("example"));
   return (
     <div>
       <div className="row">
@@ -67,21 +62,15 @@ const CheckOut = () => {
         </div>
 
         <div className="col-md-8">
-          {/* <h2>{addCart?.name}</h2>
-
-          <h4>${addCart?.price}</h4> */}
-
           <div className="cost-form">
             <h3>Booking</h3>
 
-           
             <form className="ship-form" onSubmit={handleSubmit(onSubmit)}>
               <input
                 defaultValue={loggedInUser.name}
                 className="form-control mt-3"
                 name="name"
                 placeholder="Your Name"
-                // defaultValue=" add New Items"
                 {...register("name")}
               />
 
@@ -95,9 +84,8 @@ const CheckOut = () => {
               />
 
               <br />
-           
+
               <input
-                // defaultValue={addCart?.name}
                 className="form-control"
                 name="servicesName"
                 placeholder={addCart?.name}
@@ -107,7 +95,6 @@ const CheckOut = () => {
               <br />
 
               <input
-                // defaultValue={addCart?.name}
                 className="form-control"
                 name="number"
                 placeholder="Your Phone Number"
@@ -115,22 +102,19 @@ const CheckOut = () => {
               />
               <br />
 
-               <div style={{ textAlign: "left" }} className="payment">
-              <p>Pay with </p>
-              <ProcessPayment></ProcessPayment>
-              {/* <SplitForm></SplitForm> */}
-            </div>
+              <div style={{ textAlign: "left" }} className="payment">
+                <p>Pay with </p>
+                <ProcessPayment></ProcessPayment>
+              </div>
               <br />
               <p>
-              Your services charge will be <b>${addCart?.price}</b>
-            </p>
+                Your services charge will be <b>${addCart?.price}</b>
+              </p>
               <input
                 className="submit-btn btn btn btn-danger brand-bg"
                 type="submit"
               />
             </form>
-           
-            
           </div>
         </div>
       </div>

@@ -4,14 +4,13 @@ import { useForm } from "react-hook-form";
 import { UserContext } from "../../../App";
 
 const Review = () => {
-    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
-
+  const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
   const { register, handleSubmit, watch, errors } = useForm();
 
   const onSubmit = (data) => {
     const eventData = {
-        ...loggedInUser,
+      ...loggedInUser,
       name: data.name,
       companyName: data.company,
       description: data.description,
@@ -50,7 +49,6 @@ const Review = () => {
                   className="form-control"
                   name="name"
                   defaultValue={loggedInUser.name}
-
                   placeholder="Your Name"
                   // defaultValue=" add New Items"
                   {...register("name")}
