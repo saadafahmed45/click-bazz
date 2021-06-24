@@ -21,7 +21,7 @@ useEffect(() => {
             <h1>To Make Your <br/>Creative <span className="brand-color">Photography</span></h1>
                 <p>“Photography is a way of feeling, of touching, of loving. What you have caught on film is captured forever… It remembers little things, long after you have forgotten everything.What I like about photographs is that they capture a moment that’s gone forever”</p>
          <button type="button" class="btn  login-btn">
-        Get Appointment
+        Get Started
          </button>
          
             </div>

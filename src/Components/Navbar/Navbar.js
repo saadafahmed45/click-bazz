@@ -48,9 +48,9 @@ useEffect(() => {
 
 
 
-          { admin && <div className="admin">
+          { admin &&  <div className="admin">
               <a class="nav-link " href="#">
-                <Link to="/dashbord/orderList">Admin</Link>
+                <Link to="/dashboard"><span className="brand-color">Admin</span></Link>
                 </a>
             </div>}
 
@@ -58,21 +58,21 @@ useEffect(() => {
 
 
 
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="">
                 <Link to="/">Home</Link>
               </a>
-              <a class="nav-link" href="#">
-                <Link to="/orders">Review</Link>
+              <a class="nav-link" href="">
+                <Link to="/blog">blog</Link>
               </a>
             
-              <a class="nav-link" href="#">
-                <Link to="/dashbord/orderList">Our Team</Link>
+              <a class="nav-link" href="">
+                <Link to="/ourTeam">Our Team</Link>
               </a>
-              <a class="nav-link" href="#">
-                <Link to="/deals">Contact us</Link>
+              <a class="nav-link" href="">
+                <Link to="/contact">Contact us</Link>
               </a>
 
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="">
        
                 <div>
 

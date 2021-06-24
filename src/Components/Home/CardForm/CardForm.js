@@ -42,9 +42,9 @@ const CardForm = () => {
     <div>
       <form onSubmit={handleSubmit}>
         <CardElement />
-        <button type="submit" disabled={!stripe}>
+        {/* <button type="submit" disabled={!stripe}>
           Pay
-        </button>
+        </button> */}
       </form>
       {
         paymentError && <p style={{color:"red"}}>{paymentError}</p>

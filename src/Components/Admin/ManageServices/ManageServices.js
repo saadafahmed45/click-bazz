@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Sidebar from "../Sidebar/Sidebar";
 import "./ManageServices.css";
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css'
+
 const ManageServices = () => {
   const [services, setService] = useState([]);
 
@@ -17,10 +20,25 @@ const ManageServices = () => {
     })
       .then((result) =>  {
         if(result){
-          alert('Services Deleted successfully');
+          
+          // alert('Services Deleted successfully');
+          toast.success("Service Deleted successfully!   (reload the page)", {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            });
+
+
+
         }
+        // window.location.reload();
         
             }
+            
 
       )}
 
@@ -62,7 +80,10 @@ const ManageServices = () => {
                   </tr>
                 ))}
               </tbody>
+
             </table>
+            <ToastContainer />
+
           </div>
         </div>
       </div>

@@ -41,7 +41,9 @@ const BookList = () => {
                   <FontAwesomeIcon icon={faCamera} />
                   <div class="card-body ">
                     <h5 class="card-title">{order.service}</h5>
-                    <p class="card-text">{order.description}</p>
+                    <h5 class="card-text brand-color">${order.price}</h5>
+                 
+                    <p class="card-text"><span><b>Order Time:</b></span><br/>{order.orderTime}</p>
                     <a href="#" class="btn btn-sm btn-danger">
                       Pending{" "}
                     </a>

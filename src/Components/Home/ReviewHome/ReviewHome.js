@@ -12,14 +12,14 @@ const ReviewHome = () => {
   return (
     <>
       <section className="review-section">
-        <div className="">
+        <div className="container-fluid">
           <h1 className="mb-5  bold-six">Testimonials </h1>
           {/* <h5>{reviews.length}</h5> */}
           <div className="row text-center">
             {/* className="brand-color bold-six" */}
             <Carousel>
               {reviews?.map((review) => (
-                <div class="carousel-box">
+                <div class="carousel-box ml-2">
                   <div class="carousel-header">
                     <img src={review.photo} alt="" />
                     <h5>{review.name}</h5>

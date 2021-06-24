@@ -13,6 +13,11 @@ import Login from "./Components/Login/Login";
 import Review from "./Components/Home/Review/Review";
 import MakeAdmin from "./Components/Admin/MakeAdmin/MakeAdmin";
 import OrderList from "./Components/Admin/OrderList/OrderList";
+import ReviewHome from "./Components/Home/ReviewHome/ReviewHome";
+import Contact from "./Components/Home/Contact/Contact";
+import Navbar from "./Components/Navbar/Navbar";
+import OurTeam from "./Components/Home/OurTeam/OurTeam";
+
 export const UserContext = createContext();
 
 function App() {
@@ -28,18 +33,39 @@ function App() {
             </Route>
 
             {/* user  */}
-            <Route path="/checkOut/:_id">
-              <CheckOut></CheckOut>
-            </Route>
-            <Route path="/checkOut/booking"></Route>
-
             <Route path="/review">
-              <Review></Review>
+              <Navbar/>
+              <ReviewHome></ReviewHome>
             </Route>
 
-            <Route path="/bookingList">
-              <BookList></BookList>
+
+            <Route path="/blog">
+              <Navbar/>
+           <h1>Blog section coming soon</h1>
             </Route>
+            
+            <Route path="/ourTeam">
+              <Navbar/>
+            <OurTeam></OurTeam>
+            </Route>
+
+            <Route path="/contact">
+              <Navbar/>
+              <Contact/>
+            </Route>
+
+            <PrivateRoute path="/checkOut/:_id">
+              <CheckOut></CheckOut>
+            </PrivateRoute>
+            <PrivateRoute path="/checkOut/booking"></PrivateRoute>
+
+            <PrivateRoute path="/review">
+              <Review></Review>
+            </PrivateRoute>
+
+            <PrivateRoute path="/bookingList">
+              <BookList></BookList>
+            </PrivateRoute>
 
             <Route path="/login">
               <Login></Login>
@@ -48,25 +74,25 @@ function App() {
             {/* user  */}
 
             {/* admin */}
-            <Route path="/dashboard">
+            <PrivateRoute path="/dashboard">
               <Dashboard></Dashboard>
-            </Route>
+            </PrivateRoute>
 
-            <Route path="/dashbord/addServices">
+            <PrivateRoute path="/dashbord/addServices">
               <AddServices></AddServices>
-            </Route>
+            </PrivateRoute>
 
-            <Route path="/dashbord/makeAdmin">
+            <PrivateRoute path="/dashbord/makeAdmin">
               <MakeAdmin></MakeAdmin>
-            </Route>
+            </PrivateRoute>
 
-            <Route path="/dashbord/orderList">
+            <PrivateRoute path="/dashbord/orderList">
               <OrderList></OrderList>
-            </Route>
+            </PrivateRoute>
 
-            <Route path="/dashbord/manageServices">
+            <PrivateRoute path="/dashbord/manageServices">
               <ManageServices></ManageServices>
-            </Route>
+            </PrivateRoute>
             {/* admin */}
 
             <Route path="*">

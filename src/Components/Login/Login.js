@@ -47,9 +47,8 @@ function Login() {
           photo: photoURL
         };
         setLoginUser(signInUsers);
-        storAuthToken()
         history.replace(from);
-        alert('login successfully')
+        alert('login successfully');
 
         console.log(email, displayName, photoURL);
       })
@@ -60,27 +59,6 @@ function Login() {
       });
   };
 
-
-const storAuthToken =() => {
-  firebase.auth().currentUser.getIdToken(/* forceRefresh */ true)
-  .then(function(idToken) {
-   console.log(idToken);
-   
-sessionStorage.setItem('token', idToken);
-
-  }).catch(function(error) {
-    // Handle error
-  });
-}
-
-
-
-
-
-
-
-
-  
   const handleFbSignIn = () => {
     const fbProvider = new firebase.auth.FacebookAuthProvider();
 
@@ -224,7 +202,8 @@ sessionStorage.setItem('token', idToken);
   return (
     <>
       <Navbar />
-      <div className="container text-center">
+      <section className="login">   
+         <div className="container text-center">
         <div>
           {loginUser.isSignedIn && (
             <div className="user-sec">
@@ -326,6 +305,8 @@ sessionStorage.setItem('token', idToken);
           </div>
         </div>
       </div>
+      </section>
+
     </>
   );
 }

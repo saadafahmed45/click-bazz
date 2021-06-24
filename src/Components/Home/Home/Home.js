@@ -6,10 +6,14 @@ import Contact from '../Contact/Contact'
 import ReviewHome from '../ReviewHome/ReviewHome';
 import Footer from '../Footer/Footer';
 import OurTeam from '../OurTeam/OurTeam';
+import SliderSection from '../SliderSection/SliderSection';
 const Home = () => {
     return (
         <div>
+            <SliderSection></SliderSection>
+
             <Header></Header>
+
             <Services></Services>
             <Professionaly></Professionaly>
             <ReviewHome></ReviewHome>

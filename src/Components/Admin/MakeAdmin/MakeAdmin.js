@@ -2,6 +2,8 @@ import React from 'react';
 import Sidebar from '../Sidebar/Sidebar';
 import { useForm } from "react-hook-form";
 import './MakeAdmin.css'
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css'
 const MakeAdmin = () => {
 
 
@@ -22,7 +24,17 @@ const MakeAdmin = () => {
         body: JSON.stringify(eventData),
       }).then((res) => {
         if (res) {
-          alert("Admin added Successfully");
+          // alert("Admin added Successfully");
+          toast.error("New Admin Added successfully!", {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            });
+
         }
       });
     };
@@ -69,6 +81,7 @@ const MakeAdmin = () => {
                   className="submit-btn btn btn btn-danger brand-bg"
                   type="submit"
                 />
+                <ToastContainer/>
 </form>
                     </div>
                 </div>

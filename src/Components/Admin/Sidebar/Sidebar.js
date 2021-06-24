@@ -6,6 +6,13 @@ import { faCog, faSignOutAlt, faCalendar, faGripHorizontal, faUsers,faUserMd } f
 import {  faFileAlt } from '@fortawesome/free-regular-svg-icons'
 {/* <i class="fas faUserMd"></i> */}
 const Sidebar = () => {
+
+
+const reloadPage = () =>{
+    window.location.reload();
+}
+
+
     return (
         <div className="sidebar d-flex flex-column justify-content-between col-md-2 py-5 px-4" style={{height:"100vh"}}>
         <ul className="list-unstyled">
@@ -39,7 +46,7 @@ const Sidebar = () => {
             </li>
         </ul>
         <div>
-            <Link to="/" className="text-white"><FontAwesomeIcon icon={faSignOutAlt} /> <span>Logout</span></Link>
+            <Link to="/"   onClick={reloadPage} className="text-white"><FontAwesomeIcon icon={faSignOutAlt} /> <span>Logout</span></Link>
         </div>
     </div>
     );

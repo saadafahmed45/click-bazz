@@ -1,5 +1,5 @@
 import React from "react";
-import StudioPic from "../../Images/studio.jpg";
+import StudioPic from "../../Images/team.jpg";
 import "./Professionaly.css";
 import Aos from 'aos';
 import "aos/dist/aos.css";

@@ -5,6 +5,10 @@ import ChackSidebar from "../ChackSidebar/ChackSidebar";
 import { UserContext } from "../../../App";
 import "./CheckOut.css";
 import ProcessPayment from "../../Home/ProcessPayment/ProcessPayment";
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
+
+
 
 const CheckOut = () => {
   // add checkout  start
@@ -31,7 +35,7 @@ const CheckOut = () => {
       price: addCart?.price,
       // shipment: shippingData,
       number: data.number,
-      orderTime: new Date(),
+      orderTime: new Date().toString("DD-MM-YYYY"),
       // paymentId,
       description: addCart.description,
     };
@@ -44,7 +48,17 @@ const CheckOut = () => {
       body: JSON.stringify(eventData),
     }).then((res) => {
       if (res) {
-        alert(" Your order is processed ");
+        // alert(" Your order is processed ");
+        toast.success("Your order is processed!", {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          });
+
       }
 
       console.log("server side order adding");
@@ -114,6 +128,7 @@ const CheckOut = () => {
                 className="submit-btn btn btn btn-danger brand-bg"
                 type="submit"
               />
+              <ToastContainer />
             </form>
           </div>
         </div>

@@ -3,6 +3,9 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import Sidebar from "../Sidebar/Sidebar";
 import './AddServices.css'
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
+
 const AddServices = () => {
   const { register, handleSubmit, watch, errors } = useForm();
 
@@ -25,7 +28,18 @@ const AddServices = () => {
       body: JSON.stringify(eventData),
     }).then((res) =>{
 if(res){
-  alert('Services Added successfully');
+  // alert('Services Added successfully');
+
+  toast.error("New Services Added successfully!", {
+    position: "top-right",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    });
+
 }
 
     }
@@ -111,6 +125,8 @@ if(res){
                   className="submit-btn btn btn btn-danger brand-bg"
                   type="submit"
                 />
+              <ToastContainer />
+
               </form>
             </div>
           </div>

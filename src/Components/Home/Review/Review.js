@@ -2,6 +2,8 @@ import React, { useContext, useState } from "react";
 import ChackSidebar from "../../User/ChackSidebar/ChackSidebar";
 import { useForm } from "react-hook-form";
 import { UserContext } from "../../../App";
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css'
 
 const Review = () => {
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
@@ -24,7 +26,17 @@ const Review = () => {
       body: JSON.stringify(eventData),
     }).then((res) => {
       if (res) {
-        alert("Thank You for Reviewed");
+        // alert("Thank You for Reviewed");
+        toast.success("Thank You for Reviewed Us! ", {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          });
+
       }
     });
   };
@@ -83,6 +95,8 @@ const Review = () => {
                   className="submit-btn btn btn btn-danger brand-bg"
                   type="submit"
                 />
+            <ToastContainer />
+
               </form>
             </div>
           </div>
