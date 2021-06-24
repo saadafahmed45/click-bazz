@@ -97,12 +97,19 @@ input.submit-btn {
 @media only screen and (max-width: 600px) {
     .form-section {
         box-shadow: 0px 0px 2px;
-        width: 100%;
+        width: 110%;
         height: 71%;
         padding: 12px 0px;
         margin-left: 0%;
         background: #fafafa;
         border-radius: 10px;
+    }
+
+    input.form-control.input-sec {
+        width: 58%;
+        margin-left: 21%;
+      
+    
     }
 
 }
