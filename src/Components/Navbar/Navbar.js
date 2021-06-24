@@ -11,7 +11,7 @@ const Navbar = () => {
   const [admin,setAdmin] =useState(false)
 
 useEffect(() => {
-    fetch("http://localhost:7000/isAdmin",{
+    fetch("https://secure-reaches-57604.herokuapp.com/isAdmin",{
       method: 'POST',
       headers: {"content-type": 'application/json'},
       body:JSON.stringify({email:loginUser.email})
