@@ -123,7 +123,7 @@ const Footer = () => {
           
         </div>
         <div className="copyRight text-center">
-          <p>Copyright © {new Date().getFullYear()} clickbaaz.com</p>
+          <p>Copyright © {new Date().getFullYear()} click-baaz-11.web.app</p>
         </div>
       </section>
     </>

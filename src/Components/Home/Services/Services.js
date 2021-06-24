@@ -14,7 +14,7 @@ const Services = () => {
   },[])
   
   useEffect(() => {
-    fetch("http://localhost:7000/services")
+    fetch("https://click-buzz-11.web.app/services")
       .then((res) => res.json())
       .then((data) => setService(data));
   }, []);
