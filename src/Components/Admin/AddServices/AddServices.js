@@ -21,7 +21,7 @@ const AddServices = () => {
     };
     console.log(eventData);
 
-    const url = `http://localhost:7000/addServices`;
+    const url = `https://secure-reaches-57604.herokuapp.com/addServices`;
     fetch(url, {
       method: "POST",
       headers: { "content-type": "application/json" },

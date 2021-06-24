@@ -34,24 +34,23 @@ function App() {
 
             {/* user  */}
             <Route path="/review">
-              <Navbar/>
+              <Navbar />
               <ReviewHome></ReviewHome>
             </Route>
 
-
             <Route path="/blog">
-              <Navbar/>
-           <h1>Blog section coming soon</h1>
+              <Navbar />
+              <h1>Blog section coming soon</h1>
             </Route>
-            
+
             <Route path="/ourTeam">
-              <Navbar/>
-            <OurTeam></OurTeam>
+              <Navbar />
+              <OurTeam></OurTeam>
             </Route>
 
             <Route path="/contact">
-              <Navbar/>
-              <Contact/>
+              <Navbar />
+              <Contact />
             </Route>
 
             <PrivateRoute path="/checkOut/:_id">

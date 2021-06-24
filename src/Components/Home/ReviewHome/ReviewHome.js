@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import Carousel from "react-elastic-carousel";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBookmark, faSignOutAlt, faCalendar, faGripHorizontal, faStar,faUserMd } from '@fortawesome/free-solid-svg-icons';
 import "./ReviewHome.css";
 const ReviewHome = () => {
   const [reviews, setReviews] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:7000/review")
+    fetch("https://secure-reaches-57604.herokuapp.com/review")
       .then((res) => res.json())
       .then((data) => setReviews(data));
   }, []);
@@ -27,7 +29,13 @@ const ReviewHome = () => {
                     <div class="carousel-bottom">
                       <p class="card-text">{review.description}</p>
 
-                      {/* <FontAwesomeIcon icon={faCamera} /> */}
+                     <div className="review-icon">
+                    <FontAwesomeIcon icon={faStar}/>
+                    <FontAwesomeIcon icon={faStar}/> 
+                    <FontAwesomeIcon icon={faStar}/> 
+                    <FontAwesomeIcon icon={faStar}/>
+
+                     </div>
                     </div>
                   </div>
                 </div>

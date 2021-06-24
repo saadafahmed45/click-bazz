@@ -1,46 +1,38 @@
 import React, { useEffect, useState } from "react";
 import Sidebar from "../Sidebar/Sidebar";
 import "./ManageServices.css";
-import { ToastContainer, toast } from 'react-toastify';
-  import 'react-toastify/dist/ReactToastify.css'
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const ManageServices = () => {
   const [services, setService] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:7000/services")
+    fetch("https://secure-reaches-57604.herokuapp.com/services")
       .then((res) => res.json())
       .then((data) => setService(data));
   }, []);
 
   function deleteProduct(id) {
     console.log(id);
-    fetch(`http://localhost:7000/delete/${id}`, {
+    fetch(`https://secure-reaches-57604.herokuapp.com/${id}`, {
       method: "DELETE",
-    })
-      .then((result) =>  {
-        if(result){
-          
-          // alert('Services Deleted successfully');
-          toast.success("Service Deleted successfully!   (reload the page)", {
-            position: "top-right",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-            });
-
-
-
-        }
-        // window.location.reload();
-        
-            }
-            
-
-      )}
+    }).then((result) => {
+      if (result) {
+        // alert('Services Deleted successfully');
+        toast.success("Service Deleted successfully!   (reload the page)", {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+      }
+      // window.location.reload();
+    });
+  }
 
   return (
     <div className="manage-section">
@@ -57,14 +49,13 @@ const ManageServices = () => {
               <thead>
                 <tr>
                   <th scope="col">Product Id</th>
-                  <th scope="col">Product Name</th> 
+                  <th scope="col">Product Name</th>
                   <th scope="col">Price</th>
                   <th scope="col">Action</th>
                 </tr>
               </thead>
               <tbody>
-                {
-                services.map((service) => (
+                {services.map((service) => (
                   <tr>
                     <td>{service._id}</td>
                     <td>{service.name}</td>
@@ -80,10 +71,8 @@ const ManageServices = () => {
                   </tr>
                 ))}
               </tbody>
-
             </table>
             <ToastContainer />
-
           </div>
         </div>
       </div>

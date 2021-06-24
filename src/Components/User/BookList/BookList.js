@@ -11,7 +11,7 @@ const BookList = () => {
   const [orders, setOrders] = useState();
 
   useEffect(() => {
-    fetch("http://localhost:7000/orders?email="+loggedInUser.email ,{
+    fetch("https://secure-reaches-57604.herokuapp.com/orders?email="+loggedInUser.email ,{
       method:"GET",
       Headers: { 
         "Content-Type": "application/json",

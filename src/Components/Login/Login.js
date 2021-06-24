@@ -39,16 +39,16 @@ function Login() {
       .signInWithPopup(googleProvider)
       .then((result) => {
         const { displayName, email, photoURL } = result.user;
-        const signInUser = { name: displayName, email,photoURL };
+        const signInUser = { name: displayName, email, photoURL };
         const signInUsers = {
           isSignedIn: true,
           name: displayName,
           email: email,
-          photo: photoURL
+          photo: photoURL,
         };
         setLoginUser(signInUsers);
         history.replace(from);
-        alert('login successfully');
+        alert("login successfully");
 
         console.log(email, displayName, photoURL);
       })
@@ -202,111 +202,112 @@ function Login() {
   return (
     <>
       <Navbar />
-      <section className="login">   
-         <div className="container text-center">
-        <div>
-          {loginUser.isSignedIn && (
-            <div className="user-sec">
-              <img src={loginUser.photo} alt="" />
-              <h3>welcome! {loginUser.name}</h3>
-              <p>Your Email:-{loginUser.email}</p>
-              {/* <img src={user.photo} alt="" /> */}
-            </div>
-          )}
-        </div>
-        <div className="row login-box">
-          <div className="col-12 ">
-            <div className="form-section ">
-              <h3 className="create">Login Your Account</h3>
+      <section className="login">
+        <div className="container text-center">
+          <div>
+            {loginUser.isSignedIn && (
+              <div className="user-sec">
+                <img src={loginUser.photo} alt="" />
+                <h3>welcome! {loginUser.name}</h3>
+                <p>Your Email:-{loginUser.email}</p>
+                {/* <img src={user.photo} alt="" /> */}
+              </div>
+            )}
+          </div>
+          <div className="row login-box">
+            <div className="col-12 ">
+              <div className="form-section ">
+                <h3 className="create">Login Your Account</h3>
 
-              <form onSubmit={handleSubmit}>
-                {newUser && (
+                <form onSubmit={handleSubmit}>
+                  {newUser && (
+                    <input
+                      className="form-control input-sec"
+                      type="text"
+                      name="name"
+                      onBlur={handleBlur}
+                      placeholder="Your Name"
+                    />
+                  )}
+                  <br />
                   <input
                     className="form-control input-sec"
                     type="text"
-                    name="name"
+                    name="email"
                     onBlur={handleBlur}
-                    placeholder="Your Name"
+                    placeholder="Your Email"
+                    required
                   />
+                  <br />
+                  <input
+                    className="form-control input-sec"
+                    type="password"
+                    name="password"
+                    onBlur={handleBlur}
+                    placeholder=" Your Password"
+                    required
+                  />
+
+                  <br />
+
+                  <input
+                    className="submit-btn"
+                    type="submit"
+                    value={newUser ? "Sing up" : "Login"}
+                  />
+                  <br />
+                  <div className="check-box">
+                    <p>Don't Have Account?</p>
+                    <div class="form-check form-switch">
+                      <input
+                        class="form-check-input"
+                        onChange={() => setNewUser(!newUser)}
+                        name="newUser"
+                        type="checkbox"
+                        id="flexSwitchCheckDefault"
+                      ></input>
+                      <label htmlFor="newUser">Create a new user</label>
+                    </div>
+                  </div>
+                </form>
+                <p style={{ color: "red" }}>{user.error}</p>
+                {user.success && (
+                  <p style={{ color: "green" }}>
+                    {" "}
+                    Account {newUser
+                      ? "created"
+                      : "logged in"} successfully{" "}
+                  </p>
+                )}
+              </div>
+              <hr></hr>
+              <div className="social-log">
+                {user.isSignedIn ? (
+                  <button onClick={handleSignOut}> sign out</button>
+                ) : (
+                  <button onClick={handleSign}>
+                    {" "}
+                    <span>
+                      {" "}
+                      <img alt="" src={GoogleLogo}></img>
+                    </span>
+                    google sign in
+                  </button>
                 )}
                 <br />
-                <input
-                  className="form-control input-sec"
-                  type="text"
-                  name="email"
-                  onBlur={handleBlur}
-                  placeholder="Your Email"
-                  required
-                />
-                <br />
-                <input
-                  className="form-control input-sec"
-                  type="password"
-                  name="password"
-                  onBlur={handleBlur}
-                  placeholder=" Your Password"
-                  required
-                />
-
-                <br />
-
-                <input
-                  className="submit-btn"
-                  type="submit"
-                  value={newUser ? "Sing up" : "Login"}
-                />
-                <br />
-                <div className="check-box">
-                  <p>Don't Have Account?</p>
-                  <div class="form-check form-switch">
-                    <input
-                      class="form-check-input"
-                      onChange={() => setNewUser(!newUser)}
-                      name="newUser"
-                      type="checkbox"
-                      id="flexSwitchCheckDefault"
-                    ></input>
-                    <label htmlFor="newUser">Create a new user</label>
-                  </div>
-                </div>
-              </form>
-              <p style={{ color: "red" }}>{user.error}</p>
-              {user.success && (
-                <p style={{ color: "green" }}>
-                  {" "}
-                  Account {newUser ? "created" : "logged in"} successfully{" "}
-                </p>
-              )}
-            </div>
-            <hr></hr>
-            <div className="social-log">
-              {user.isSignedIn ? (
-                <button onClick={handleSignOut}> sign out</button>
-              ) : (
-                <button onClick={handleSign}>
+                <button onClick={handleFbSignIn}>
                   {" "}
                   <span>
                     {" "}
-                    <img alt="" src={GoogleLogo}></img>
-                  </span>
-                  google sign in
+                    <img alt="" src={FacebookLogo}></img>
+                  </span>{" "}
+                  Sign in with facebook
                 </button>
-              )}
-              <br />
-              <button onClick={handleFbSignIn}>
-                {" "}
-                <span>
-                  {" "}
-                  <img alt="" src={FacebookLogo}></img>
-                </span>{" "}
-                Sign in with facebook
-              </button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
       </section>
-
     </>
   );
 }

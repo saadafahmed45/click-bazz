@@ -16,7 +16,7 @@ const CheckOut = () => {
   console.log(_id);
   const [cost, setCost] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:7000/services")
+    fetch("https://secure-reaches-57604.herokuapp.com/services")
       .then((res) => res.json())
       .then((data) => setCost(data));
   }, []);

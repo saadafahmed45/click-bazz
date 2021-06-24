@@ -6,7 +6,7 @@ import {
   faInstagram,
   faGooglePlusG,
 } from "@fortawesome/free-brands-svg-icons";
-import Aos from 'aos';
+import Aos from "aos";
 import "aos/dist/aos.css";
 // import Shahriar from '../../Images/182218972_803882723893466_6280038520105647310_n.jpg'
 import Samir from "../../Images/samir.jpg";
@@ -33,7 +33,6 @@ const OurTeam = () => {
       author: "Photographer & Model",
       From: "Dhaka,Jatrabari",
     },
-   
   ];
 
   return (
@@ -51,7 +50,10 @@ const OurTeam = () => {
           {/* <h2>{teamMembers.length}</h2> */}
           {teamMembers?.map((member) => (
             <div className="col-md-4 ">
-              <div className="team-box  justify-content-center"data-aos="zoom-in">
+              <div
+                className="team-box  justify-content-center"
+                data-aos="zoom-in"
+              >
                 <div className="team-img">
                   <img className="img-fluid" src={member.img} alt="" />
                 </div>

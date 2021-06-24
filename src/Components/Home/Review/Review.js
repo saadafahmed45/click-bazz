@@ -19,7 +19,7 @@ const Review = () => {
     };
     console.log(eventData);
 
-    const url = `http://localhost:7000/addReview`;
+    const url = `https://secure-reaches-57604.herokuapp.com/addReview`;
     fetch(url, {
       method: "POST",
       headers: { "content-type": "application/json" },

@@ -11,7 +11,7 @@ const Dashboard = () => {
         </div>
         <div className="col-md-8 mt-5">
         <h1>Welcome to The Dashboard</h1>
-        <h5>Now You can Change All Section... </h5>
+        <h5 className="brand-color">Now You can Change All Section... </h5>
         </div>
     </div>
         </div>
