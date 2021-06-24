@@ -102,7 +102,8 @@ const CheckOut = () => {
               <input
                 className="form-control"
                 name="servicesName"
-                placeholder={addCart?.name}
+                defaultValue={addCart?.name}
+                placeholder='services name'
                 {...register("example")}
               />
 
