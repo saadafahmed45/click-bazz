@@ -41,7 +41,7 @@ const CheckOut = () => {
     };
     console.log(eventData);
 
-    const url = `http://localhost:7000/addOrder`;
+    const url = `https://secure-reaches-57604.herokuapp.com/addOrder`;
     fetch(url, {
       method: "POST",
       headers: { "content-type": "application/json" },

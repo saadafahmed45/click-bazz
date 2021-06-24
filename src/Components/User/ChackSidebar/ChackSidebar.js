@@ -22,7 +22,7 @@ const ChackSidebar = () => {
                 </Link>
             </li>
             <li>
-                <Link to="/review" className="text-white">
+                <Link to="/addReview" className="text-white">
                     <FontAwesomeIcon icon={faStar}/> <span>Review</span>
                 </Link>
             </li>
