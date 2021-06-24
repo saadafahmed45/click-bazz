@@ -14,7 +14,7 @@ const Services = () => {
   },[])
   
   useEffect(() => {
-    fetch("https://click-buzz-11.web.app/services")
+    fetch("https://secure-reaches-57604.herokuapp.com/services")
       .then((res) => res.json())
       .then((data) => setService(data));
   }, []);
