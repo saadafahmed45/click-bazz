@@ -62,9 +62,9 @@ function App() {
               <Review></Review>
             </PrivateRoute>
 
-            <PrivateRoute path="/bookingList">
+            <Route path="/bookingList">
               <BookList></BookList>
-            </PrivateRoute>
+            </Route>
 
             <Route path="/login">
               <Login></Login>
@@ -77,21 +77,21 @@ function App() {
               <Dashboard></Dashboard>
             </PrivateRoute>
 
-            <PrivateRoute path="/dashbord/addServices">
+            <Route path="/dashbord/addServices">
               <AddServices></AddServices>
-            </PrivateRoute>
+            </Route>
 
-            <PrivateRoute path="/dashbord/makeAdmin">
+            <Route path="/dashbord/makeAdmin">
               <MakeAdmin></MakeAdmin>
-            </PrivateRoute>
+            </Route>
 
-            <PrivateRoute path="/dashbord/orderList">
+            <Route path="/dashbord/orderList">
               <OrderList></OrderList>
-            </PrivateRoute>
+            </Route>
 
-            <PrivateRoute path="/dashbord/manageServices">
+            <Route path="/dashbord/manageServices">
               <ManageServices></ManageServices>
-            </PrivateRoute>
+            </Route>
             {/* admin */}
 
             <Route path="*">

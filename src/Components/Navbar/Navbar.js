@@ -28,7 +28,7 @@ useEffect(() => {
       <nav class="navbar navbar-expand-lg navbar-light bg-light ">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
-            <Link to="/"><i>Click Bazz</i></Link>
+            <Link to="/"><i>Click-Bazz</i></Link>
           </a>
           <button
             class="navbar-toggler"
@@ -62,7 +62,7 @@ useEffect(() => {
                 <Link to="/">Home</Link>
               </a>
               <a class="nav-link" href="">
-                <Link to="/blog">blog</Link>
+                <Link to="/bookingList">Booking</Link>
               </a>
             
               <a class="nav-link" href="">

@@ -15,7 +15,7 @@ const ManageServices = () => {
 
   function deleteProduct(id) {
     console.log(id);
-    fetch(`https://secure-reaches-57604.herokuapp.com/${id}`, {
+    fetch(`https://secure-reaches-57604.herokuapp.com/delete/${id}`, {
       method: "DELETE",
     }).then((result) => {
       if (result) {
