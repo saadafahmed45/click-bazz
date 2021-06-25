@@ -45,3 +45,6 @@ a.nav-link:hover{
   /* font-weight: 500; */
 }
 
+a.nav-link a:hover {
+ color: tomato;
+}
