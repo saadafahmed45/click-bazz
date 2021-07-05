@@ -2,16 +2,23 @@
 
 
 
-## This is Made by:
-1. ReactJs
-2. React Bootstrap
-3. Firebase
-4. React-elastic-carousel,
-5. React-hook-form
-6. React-owl-carousel
-7. React-responsive-carousel
-8. React-router
-9. react-toastify
+## Front-end Thechnology :
+
+1. Html5 & Css3 
+2. ReactJs
+3. Bootstrap 4
+4. Firebase
+5. React-elastic-carousel,
+6. React-hook-form
+7. React-owl-carousel
+8. React-responsive-carousel
+9. React-router
+10. react-toastify
+
+### Backend Technology
+1. Node.js
+2. Express.js
+3. MongoDB
 
 
 ### Developed by :
